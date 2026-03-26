@@ -1,40 +1,7 @@
-# CP2 — Le Shell
+# Cours de Micro-Frontends / Microservices
 
-Télécharge le zip depuis le dossier partagé Teams et extrais-le.
+Voici le repository pour mon cours de micro-frontends et microservices (EFREI).
 
-```bash
-npm install
-npm start
-```
+Vous pourrez retrouver les différents exercices et checkpoints dans les branches correspondantes de ce projet
 
----
-
-## Mission
-
-Ouvrir `webpack.config.js` et compléter les 3 TODOs :
-
-**TODO 1 — Nommer le Shell**
-```js
-name: 'shell',
-```
-
-**TODO 2 — Préparer les remotes**
-```js
-remotes: {},
-```
-
-**TODO 3 — Partager React**
-```js
-shared: {
-  react: { singleton: true, requiredVersion: '^18.2.0' },
-  'react-dom': { singleton: true, requiredVersion: '^18.2.0' },
-},
-```
-
----
-
-## Validation
-
-- `npm start` démarre sans erreur
-- http://localhost:3000 affiche "Shell opérationnel"
-- Push sur `checkpoint2-[nom-equipe]`
+- `checkpoint2`
