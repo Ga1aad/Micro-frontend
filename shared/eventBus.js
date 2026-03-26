@@ -53,10 +53,10 @@ class EventBus {
    * @param {any} data - Donnees a transmettre
    */
   emit(event, data) {
-    if (!this.listeners[event]) return;
-
     // Log pour debug
     console.log(`[EventBus] ${event}`, data);
+
+    if (!this.listeners[event]) return;
 
     this.listeners[event].forEach(callback => {
       try {
