@@ -1,7 +1,39 @@
-# Cours de Micro-Frontends / Microservices
+# CP5 — Le Catalogue
 
-Voici le repository pour mon cours de micro-frontends et microservices (EFREI).
+Télécharge le zip **checkpoint5** depuis Teams.
 
-Vous pourrez retrouver les différents exercices et checkpoints dans les branches correspondantes de ce projet
+```bash
+T1 : cd mfe-catalog && npm install && npm start  # 3003
+T2 : cd mfe-header  && npm install && npm start  # 3001
+T3 : cd mfe-lobby   && npm install && npm start  # 3002
+T4 : cd shell       && npm install && npm start  # 3000
+```
 
-- `checkpoint2`
+---
+
+## Mission
+
+Créer `mfe-catalog` de A à Z et le brancher sur le Shell.
+
+**`mfe-catalog/webpack.config.js`**
+→ 4 TODOs : configurer Module Federation (name, filename, exposes, shared)
+
+**`mfe-catalog/src/components/Catalog.jsx`**
+→ Notifier l'eventBus quand l'utilisateur ajoute un produit
+
+**`shell/webpack.config.js`**
+→ Déclarer `mfe-catalog` comme remote (port 3003)
+
+**`shell/src/App.jsx`**
+→ Importer et afficher le Catalog
+
+---
+
+## Validation
+
+- `localhost:3000` → 6 produits s'affichent dans la Boutique
+- Console : `[EventBus] cart:add { id, name, price }` au clic sur "Ajouter"
+
+---
+
+📤 Push ta branche
