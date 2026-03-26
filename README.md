@@ -1,7 +1,33 @@
-# Cours de Micro-Frontends / Microservices
+# CP4 — La Babel
 
-Voici le repository pour mon cours de micro-frontends et microservices (EFREI).
+Télécharge le zip **checkpoint4** depuis Teams.
 
-Vous pourrez retrouver les différents exercices et checkpoints dans les branches correspondantes de ce projet
+```bash
+T1 : cd mfe-header && npm install && npm start   # 3001
+T2 : cd mfe-lobby  && npm install && npm start   # 3002
+T3 : cd shell      && npm install && npm start   # 3000
+```
 
-- `checkpoint2`
+---
+
+## Mission
+
+Lobby et Header doivent communiquer via l'Event Bus (`shared/eventBus.js`).
+
+**`mfe-lobby/src/components/Lobby.jsx`**
+→ Quand on rejoint une partie, notifie l'eventBus
+
+**`mfe-header/src/components/Navbar.jsx`**
+→ Écoute l'événement et incrémente le badge
+→ Hint : `eventBus.on()` retourne une fonction — utilise-la pour le cleanup React
+
+---
+
+## Validation
+
+- Cliquer "Rejoindre" → badge notifications +1 dans le Header
+- Console : `[EventBus] game:joined { ... }`
+
+---
+
+📤 Push ta branche
